@@ -11,13 +11,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Organico',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        backgroundColor: Colors.white,
+        primaryColor: Colors.white,
+        iconTheme: const IconThemeData(
+          color: Colors.black,
+        ),
+        appBarTheme: const AppBarTheme(
+          color: Colors.transparent,
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+        ),
+        buttonTheme: const ButtonThemeData(
+          buttonColor: Colors.black,
+        ),
       ),
       initialRoute: "/",
-      onGenerateRoute: (RouteSettings settings)=> GenerateRoute.generateRoute(settings),
+      onGenerateRoute: (RouteSettings settings) =>
+          GenerateRoute.generateRoute(settings),
     );
   }
 }
-
