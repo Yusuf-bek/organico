@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:organico/sizeconfig/size_config.dart';
+import 'package:organico/core/components/size_config.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

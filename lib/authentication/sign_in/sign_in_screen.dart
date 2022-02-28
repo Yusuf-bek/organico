@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:organico/sizeconfig/size_config.dart';
+import 'package:organico/core/components/size_config.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);

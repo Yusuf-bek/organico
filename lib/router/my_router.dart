@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:organico/authentication/new_registration/new_registration_screen.dart';
 import 'package:organico/authentication/sign_in/sign_in_screen.dart';
 import 'package:organico/screens/home_screen/home_screen.dart';
 import 'package:organico/screens/splash_screen/splash_screen.dart';
@@ -16,6 +17,11 @@ class GenerateRoute {
       case "/signinscreen":
         return MaterialPageRoute(
           builder: (context) => const SignInScreen(),
+        );
+      
+      case "/newregistrationscreen":
+        return MaterialPageRoute(
+          builder: (context) => const NewRegistrationScreen(),
         );
 
       case "/homescreen":
