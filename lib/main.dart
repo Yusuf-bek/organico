@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:organico/router/my_router.dart';
+import 'package:organico/theme/generate_material_color.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+  final GenerateRoute routClassInctance = GenerateRoute();
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Organico',
       theme: ThemeData(
-        backgroundColor: Colors.white,
-        primaryColor: Colors.white,
-        iconTheme: const IconThemeData(
-          color: Colors.black,
+        primarySwatch: HexToMaterialColor.buildMaterialColor(
+          const Color(0xFF2ECC71),
         ),
+        backgroundColor: Colors.white,
+        primaryColor: const Color(0xFF2ECC71),
         appBarTheme: const AppBarTheme(
           color: Colors.transparent,
           elevation: 0,
@@ -27,12 +29,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
         buttonTheme: const ButtonThemeData(
-          buttonColor: Colors.black,
+          buttonColor: Colors.green,
+          textTheme: ButtonTextTheme.primary,
         ),
       ),
-      initialRoute: "/",
-      onGenerateRoute: (RouteSettings settings) =>
-          GenerateRoute.generateRoute(settings),
+      //! Change this inital route after finishing
+      initialRoute: "/signinscreen",
+      onGenerateRoute: routClassInctance.generateRoute,
     );
   }
 }
