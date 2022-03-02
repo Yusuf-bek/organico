@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:organico/core/components/size_config.dart';
 import 'package:organico/core/constants/colors.dart';
+import 'package:organico/core/constants/png_icon_paths.dart';
 import 'package:organico/core/constants/text_styles.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -147,7 +148,7 @@ class SignInScreen extends StatelessWidget {
         width: getProportionScreenWidth(349),
         height: getProportionScreenHeight(318),
         child: const Image(
-          image: AssetImage("assets/light_theme_icons/signin.png"),
+          image: AssetImage(MyIconPaths.lightSignin),
         ),
       ),
     );
