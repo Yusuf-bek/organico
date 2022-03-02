@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:organico/core/components/size_config.dart';
-import 'package:organico/core/constants/colors.dart';
 import 'package:organico/core/constants/text_styles.dart';
+import 'package:organico/widgets/common_appbar.dart';
 
 class NewRegistrationScreen extends StatelessWidget {
   const NewRegistrationScreen({Key? key}) : super(key: key);
@@ -9,15 +9,7 @@ class NewRegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: const Text("New Registration"),
-      ),
+      appBar: MyAppBar.getAppBar(context: context, title: "New Registration"),
       body: Column(
         children: [
           Expanded(
