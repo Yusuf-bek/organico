@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.getMyLightTheme(),
       //! Change this inital route after finishing
       initialRoute: "/newregistrationscreen",
+      
       onGenerateRoute: routClassInctance.generateRoute,
     );
   }

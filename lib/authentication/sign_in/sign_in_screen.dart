@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:organico/core/components/size_config.dart';
+import 'package:organico/core/constants/colors.dart';
+import 'package:organico/core/constants/text_styles.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class SignInScreen extends StatelessWidget {
           children: [
             getWidgetForImage(),
             getWidgwetForTexts(context),
-            
+
             //* InputField for phone number
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -28,14 +30,14 @@ class SignInScreen extends StatelessWidget {
                         width: getProportionScreenWidth(74),
                         height: getProportionScreenHeight(48),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF92929D),
+                          color: MyColors.greyTextColor,
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(27.0),
                             bottomLeft: Radius.circular(27.0),
                           ),
                           border: Border.all(
                             width: 0.5,
-                            color: const Color(0xFF92929D),
+                            color: MyColors.greyTextColor,
                           ),
                         ),
                       ),
@@ -44,22 +46,23 @@ class SignInScreen extends StatelessWidget {
                         height: getProportionScreenHeight(48),
                         child: const TextField(
                           decoration: InputDecoration(
-                              labelText: "Your phone number",
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xFF92929D),
-                                ),
-                                borderRadius: BorderRadius.only(
-                                  bottomRight: Radius.circular(27.0),
-                                  topRight: Radius.circular(27.0),
-                                ),
+                            labelText: "Your phone number",
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: MyColors.greyTextColor,
                               ),
-                              filled: true,
-                              hintStyle: TextStyle(
-                                color: Color(0xFF92929D),
+                              borderRadius: BorderRadius.only(
+                                bottomRight: Radius.circular(27.0),
+                                topRight: Radius.circular(27.0),
                               ),
-                              hintText: "phone number",
-                              fillColor: Colors.white70),
+                            ),
+                            filled: true,
+                            hintStyle: TextStyle(
+                              color: MyColors.greyTextColor,
+                            ),
+                            hintText: "phone number",
+                            fillColor: Colors.white70,
+                          ),
                         ),
                       ),
                     ],
@@ -90,7 +93,7 @@ class SignInScreen extends StatelessWidget {
                 ),
               ),
             ),
-            
+
             //* Reset password button
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -166,9 +169,7 @@ class SignInScreen extends StatelessWidget {
             ),
             Text(
               "Welcome to Organico Mobile Apps. Please fill in the field below to sign in.",
-              style: TextStyle(
-                color: Colors.grey,
-              ),
+              style: MyTextStyles.infoTextStyle,
             ),
           ],
         ),
